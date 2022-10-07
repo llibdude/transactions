@@ -117,13 +117,15 @@ const UserTransactionTable: React.FC<{ transactions: Transaction[] }> = ({
     <div className="overflow-x-auto">
       <table {...getTableProps()} className="min-w-full" role="table">
         <thead>
-          {headerGroups.map((headerGroup) => (
+          {headerGroups.map((headerGroup, index) => (
             <tr
+              key={index}
               {...headerGroup.getHeaderGroupProps()}
               className="text-left border rounded border-primary bg-secondary"
             >
               {headerGroup.headers.map((column) => (
                 <th
+                  key={column}
                   {...column.getHeaderProps(column.getSortByToggleProps())}
                   className="py-2 px-4 text-xs font-normal text-secondary"
                 >
@@ -141,13 +143,18 @@ const UserTransactionTable: React.FC<{ transactions: Transaction[] }> = ({
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {rows.map((row) => {
+          {rows.map((row, index) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()} className="border-b border-primary">
+              <tr
+                key={index}
+                {...row.getRowProps()}
+                className="border-b border-primary"
+              >
                 {row.cells.map((cell) => {
                   return (
                     <td
+                      key={cell}
                       {...cell.getCellProps()}
                       className="p-4 whitespace-nowrap"
                     >

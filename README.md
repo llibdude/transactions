@@ -24,6 +24,8 @@ For the purpose of this exercise, the entire application is not fully unit teste
 - [NextJS](https://nextjs.org/): This application is written in NextJS, a library built on top of React. I have chosen it due to its fast ramp up time, ability to write apis without spinning up a separate server, and various developer improvements.
 - [TailwindCSS](https://tailwindcss.com/): Styled using TailwindCSS - the css framework scales well with a large team and allows you to keep your view and your styles together in one place. Very fast to create with once familiar with the classNames and highly extensible.
 - [Prettier.io](https://prettier.io/): Opinionated code formatter. Helpful to enforce a singular codeing style across the entire team to prevent whitespace churn in pull requests.
+- [React table](https://www.npmjs.com/package/react-table): An unopinionated, powerful, easy to use table in React
+- [useSWR](https://swr.vercel.app/): A library built on a strategy to keep data up to date while keeping the UI fast and reactive. First show the cached data, fetch the fresh data, and reconcile to ensure most up to date data.
 
 ## Next steps
 
