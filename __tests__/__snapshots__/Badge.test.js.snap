@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders green badge 1`] = `
+<div>
+  <div
+    class="inline-flex items-center px-1.5 py-sm border rounded-full text-sm font-medium border-green-500 bg-green-50 text-green-600"
+  >
+    Test content
+  </div>
+</div>
+`;
+
+exports[`renders red badge 1`] = `
+<div>
+  <div
+    class="inline-flex items-center px-1.5 py-sm border rounded-full text-sm font-medium border-red-500 bg-red-50 text-red-600"
+  >
+    Test content
+  </div>
+</div>
+`;

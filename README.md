@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First install dependencies,
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+`npm install`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then run the development server:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+`npm run dev`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Testing
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+`npm run test`
 
-## Learn More
+For the purpose of this exercise, the entire application is not fully unit tested.
 
-To learn more about Next.js, take a look at the following resources:
+## Requirements
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- node v16.7.1+
+- npm v8.19.2+
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Technical Stack
 
-## Deploy on Vercel
+- [NextJS](https://nextjs.org/): This application is written in NextJS, a library built on top of React. I have chosen it due to its fast ramp up time, ability to write apis without spinning up a separate server, and various developer improvements.
+- [TailwindCSS](https://tailwindcss.com/): Styled using TailwindCSS - the css framework scales well with a large team and allows you to keep your view and your styles together in one place. Very fast to create with once familiar with the classNames and highly extensible.
+- [Prettier.io](https://prettier.io/): Opinionated code formatter. Helpful to enforce a singular codeing style across the entire team to prevent whitespace churn in pull requests.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Next steps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Enforce a11y accessibility with linters. In the case of a product that helps people pay rent, it is likely that an elderly
+  population with seeing impairments will use this product. Making things easy to see and enabling screen readers is important.
+- Consider scale. If there were hundres of transactions this table would become unmanagable. Work with the api to create a way to paginate data, and on the front end enable it via an auto complete search bar with debounce and an infinite scrolling feature or paging feature.
+- Add filtering. Being able to filter by credit/debit could be useful, if there were more granular categories in the future filtering would be helpful there as well.
+- Consider mobile applications, test for cross browser compatibility including that of older browsers.
+- For the last column with details, consider alternative solutions so the table isn't super wide. Perhaps a tooltip on hover, or clicking on a row expands the row and shows details in an accordion style.
